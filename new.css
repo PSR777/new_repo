@@ -1,0 +1,31 @@
+th, td, p {
+    font:14px Verdana;
+}
+td,th {
+    
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    
+    font-weight:bold;
+    
+}
+
+
+#myTable{
+    
+   display: none;
+   
+   margin-left: 100px;
+
+}
+tbody{
+    width: 100%;
+}
+.che{
+    width: 20px;
+    height: 14px;
+}
+tr:nth-child(even) {
+    background-color: #8ae6f6;
+  }

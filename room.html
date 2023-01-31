@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="room.css">
+</head>
+<body>
+    <div id="header">
+        <div id="spend">
+            <select id="main" >
+                <option value="ram" >RAM</option>
+                <option value="avi">AVI</option>
+                <option value="raj">RAJ</option>
+                <option value="sai">SAI</option>
+                <option value="swamy">Swamy</option>
+            </select>
+        </div>
+        
+        <div id="consumer">
+            <input id="t_persons" type="number" placeholder="numerOfPeople">
+            <input type="checkbox" class="check" id="ram" name="ram" value="ram" checked  >
+            <label for="ram" onmouseover="checkchange(this)"> ram</label>
+            <input type="checkbox" class="check" id="avi" name="avi" value="avi" checked >
+            <label for="avi" onmouseover="checkchange(this)">avi</label>
+            <input type="checkbox" class="check" id="raj" name="raj" value="raj" checked >
+            <label for="raj" onmouseover="checkchange(this)">raj</label>
+            <input type="checkbox" class="check" id="sai" name="sai" value="sai" checked >
+            <label for="sai" onmouseover="checkchange(this)">sai</label>
+            <input type="checkbox" class="check" id="swamy" name="swamy" value="swamy" checked >
+            <label for="swamy" onmouseover="checkchange(this)">swamy</label>
+            
+        </div>
+        <input id="amount"   type="number" placeholder="       Enter  Amount">
+
+        <button id="sub_btn" onclick="sub(this)" >submmit</button>
+
+        <button id="show_btn" onclick="show_the_result()" >show  all reuslt</button>
+        
+
+        
+    </div>
+    <div id="result" style="display: flex ;">
+        <div >Name
+            <h3>Spend </h3>
+            <h3>consume</h3>
+        </div>
+        <div id="ram_1">RAM
+            <h3 id="ram_spend" >0 </h3>
+            <h3 id="ram_consume" >0</h3>
+        </div>
+        <div id="avi_2">AVI
+            <h3 id="avi_spend">0</h3>
+            <h3 id="avi_consume">0</h3>
+        </div>
+        <div id="raj_3">RAJ
+            <h3 id="raj_spend">0</h3>
+            <h3 id="raj_consume">0</h3>
+        </div>
+        <div id="sai_4">SAI
+            <h3 id="sai_spend">0</h3>
+            <h3 id="sai_consume">0</h3>
+        </div>
+        <div id="swamy_5">Swamy
+            <h3 id="swamy_spend">0</h3>
+            <h3 id="swamy_consume">0</h3>
+        </div>
+
+
+    </div>
+    <div >
+        <table id="haveToTable">
+            <tbody>
+                <tr id="ramRow" class="todoRow">
+                    <td class="todotd">RAM</td>
+                    <td class="todotd">have to give </td>
+                    <td class="todotd"><b>AVI</b>  =<span class="clear" style="color: red;" id="ramtoavi_amount">0</span></td>
+                    <td class="todotd"><b>RAJ</b>  =<span class="clear" style="color: red;" id="ramtoraj_amount">0</span></td>
+                    <td class="todotd"><b>SAI</b>  =<span class="clear" style="color: red;" id="ramtosai_amount">0</span></td>
+                    <td class="todotd"><b>SWAMY</b>  =<span class="clear" style="color: red;" id="ramtoswamy_amount">0</span></td>
+                </tr>
+                <tr id="aviRow" class="todoRow">
+                    <td class="todotd">AVI</td>
+                    <td class="todotd">have to give </td>
+                    <td class="todotd"><b>RAM</b>  =<span class="clear" style="color: red;" id="avitoram_amount">0</span></td>
+                    <td class="todotd"><b>Raj</b>  =<span class="clear" style="color: red;" id="avitoraj_amount">0</span></td>
+                    <td class="todotd"><b>SAI</b>  =<span class="clear"  style="color: red;" id="avitosai_amount">0</span></td>
+                    <td class="todotd"><b>SWAMY</b>  =<span class="clear" style="color: red;" id="avitoswamy_amount">0</span></td>
+                </tr>
+                <tr id="rajRow" class="todoRow">
+                    <td class="todotd">RAJ</td>
+                    <td class="todotd">have to give </td>
+                    <td class="todotd"><b>RAM</b>  = <span class="clear" style="color: red;" id="rajtoram_amount">0</span></td>
+                    <td class="todotd"><b>AVI</b>  = <span class="clear" style="color: red;" id="rajtoavi_amount">0</span></td>
+                    <td class="todotd"><b>SAI</b>  = <span class="clear" style="color: red;" id="rajtosai_amount">0</span></td>
+                    <td class="todotd"><b>SWAMY</b> = <span class="clear" style="color: red;" id="rajtoswamy_amount">0</span></td>
+                </tr>
+                <tr id="saiRow" class="todoRow">
+                    <td class="todotd">SAI</td>
+                    <td class="todotd">have to give </td>
+                    <td class="todotd"><b>RAM</b>  = <span class="clear" style="color: red;" id="saitoram_amount">0</span></td>
+                    <td class="todotd"><b>AVI</b>  = <span class="clear" style="color: red;" id="saitoavi_amount">0</span></td>
+                    <td class="todotd"><b>RAJ</b>  = <span class="clear" style="color: red;" id="saitoraj_amount">0</span></td>
+                    <td class="todotd"><b>SWAMY</b> = <span class="clear" style="color: red;" id="saitoswamy_amount">0</span></td>
+                </tr>
+                <tr id="swamyRow" class="todoRow">
+                    <td class="todotd">SWAMY</td>
+                    <td class="todotd">have to give </td>
+                    <td class="todotd"><b>RAM</b>  = <span class="clear" style="color: red;" id="swamytoram_amount">0</span></td>
+                    <td class="todotd"><b>AVI</b>  = <span class="clear" style="color: red;" id="swamytoavi_amount">0</span></td>
+                    <td class="todotd"><b>RAJ</b>  = <span class="clear" style="color: red;" id="swamytoraj_amount">0</span></td>
+                    <td class="todotd"><b>SAI</b>  = <span class="clear" style="color: red;" id="swamytosai_amount">0</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <table id="table">
+        <th>
+            <tr>
+                <td>Name</td>
+                <td> amount</td>
+                <td>Consumed</td>
+            </tr>
+        </th>
+        <tbody id="tbody">
+            
+        </tbody>
+
+    </table>
+    
+
+<script src="room.js"></script>
+
+</body>
+</html>

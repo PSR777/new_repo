@@ -1,0 +1,86 @@
+/*body{
+  background-color: beige;
+}
+#header{
+  box-shadow: #7fff00;
+  border: 4px outset rgb(181, 242, 241);
+  background-color: rgb(142, 163, 163);
+  text-align: center;
+  width: auto;
+  height: 70px; ;
+  
+}
+#logo{
+  left:auto;
+  
+  
+  width: 20px;
+  height: 50%;
+}
+#img_logo{
+  left: auto;
+  
+  width: 70px;
+  height: 70px;
+}
+#link1{
+  left: 100px;
+}
+p{
+  width: 100px;
+  text-align: center;
+  background-color: brown;
+}
+#second{
+  float: left;
+  border: 3px outset #7fff00;
+  width: 50px;
+  margin-left: 100px;
+  
+}
+#second1{
+  text-align: center;
+  float: left;
+  border: 3px outset chartreuse;
+  width: 60px;
+  margin-left: 120px;
+}
+.second{
+  text-align: center;
+  float: left;
+  border: 4px outset chartreuse;
+  width: 60px;
+  margin-left: 30px;
+}
+#second3{
+  float: left;
+  border: 5px outset chartreuse;
+  width: 50px;
+  margin-left: 30px;
+}*/
+
+html, body, .stage, .ring, .img {
+  width:100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  user-select:none;
+}
+
+html, body, .stage {
+  overflow:hidden;
+  background:#000;
+  
+}
+
+div, svg {
+  position: absolute;
+}
+
+.container {
+  perspective: 2000px;
+  width: 300px;
+  height: 400px;  
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}

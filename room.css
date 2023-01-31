@@ -1,0 +1,75 @@
+
+#header{
+    display: flex;
+}
+#header{
+    background-color: rgba(169, 169, 169, 0.488);
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    border: 3px rgba(7, 0, 0, 0.292) inset;
+
+}
+#main{
+    border: 2px rgb(45, 44, 44) solid;
+    text-decoration: none; 
+    height: 40px;
+    background-color: transparent;
+}
+#main:focus{
+    border-radius: 6px;
+}
+
+#result{
+    margin-top: 50px;
+    justify-content: space-around;
+}
+#consumer{
+    border: 2px rgb(45, 44, 44) outset;
+    padding: 5px;
+
+}
+
+label{
+    border: 1px rgb(130, 130, 130) outset;
+    display:inline-block;
+    width: 50px;
+    text-align: center;
+    background-color: #b5f85068;
+}
+#t_persons{
+    width: 15ch;
+}
+
+/* reuslt css  */
+
+#result{
+    background-color: rgba(169, 169, 169, 0.488);
+    
+    border: 4px red inset;
+    margin: 20px 10px 10px 10px;
+    border: 3px rgba(7, 0, 0, 0.292) inset;
+}
+#haveToTable{
+    width: 100%;
+    
+}
+.todoRow:nth-child(odd){
+    background-color: aquamarine; 
+}
+
+.todotd{
+    text-align: center;
+    padding : 10px;
+    border: 1px red inset;
+    border-bottom: 15px rgb(137, 137, 137) inset;
+}
+table{
+    margin-top: 20px;
+    width: 100%;
+}
+td{
+    
+    text-align: center;
+    border: 2px black inset;
+}
